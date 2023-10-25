@@ -1,25 +1,24 @@
 body {
     width: 100%;
-    height: 500px;
+    /* height: 500px; */
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #eaf7ec;
+    background-color: white;
 }
 @font-face {
     font-family: 'acumin';
     src: url('./Acumin/ Pro/ Black.otf') format('woff2'),
-        
-    
-
 }
+
+
 .logoimg{
     width: 150px;
     /* margin-top: 2em; */
 }
 nav{
     width: 100%;
-    height: 20px;
+    height: 80px;
     background-color: #eaf7ec;
    
 }
@@ -32,6 +31,8 @@ section {
     width: 100%;
     height: 100px;
     background-color: white;
+    /* margin-top: 5em; */
+    /* z-index: -1; */
 }
 
 span {
@@ -49,8 +50,10 @@ span {
     height: 100px;
     align-content: center;
     /* margin-top: -3em; */
-    bottom: -1%;
+    /* margin-bottom: 7%; */
+    /* bottom: -20%; */
     left: 15%;
+    z-index: 1;
     
 }
 
@@ -128,7 +131,7 @@ span {
     }
 }
 
-.hero::before {
+.hero::after {
     content: "";
     background-image: url("./items/medical-items.png");
     background-position: center;
@@ -141,18 +144,20 @@ span {
     width: 100%;
     height: 100%;
     z-index: -1;
-    animation: growBackground 5s ease forwards;
+    animation: fadeInBackground 3s ease forwards;
+    opacity:0; /* Set initial opacity to 0 */
 }
 
-@keyframes growBackground {
+@keyframes fadeInBackground {
     0% {
-        transform: scale(0.9);
+        opacity: 0; /* Start with full transparency (0% opacity) */
     }
 
     100% {
-        transform: scale(1);
+        opacity: 1; /* End with full visibility (100% opacity) */
     }
 }
+
 /* Existing CSS styles remain the same */
 
 .contact-nav img {
@@ -171,9 +176,44 @@ span {
         transform: translateX(-100%);
     }
 }
+@media screen and (min-width: 1021px) {
+    nav div {
+            width: 90%;
+    
+            /* display: flex; */
+            margin: auto 3%;
+            /* align-items: center; */
+            /* justify-content: center; */
+        }
+    .contact-nav {
+            width: 70%;
+            height: 100px;
+            align-items: center;
+            /* Adjust the width for mobile screens */
+            left: 15%;
+            bottom: -18%;
+            /* Adjust the position for mobile screens */
+        }
+                 .hero h1 {
+                     font-size: 60px;
+                     margin-top: 1em;
+                     /* text-align: center; */
+                 }
+                  .container {
+                      width: 95%;
+        
+        
+                      /* Adjust the width for mobile screens */
+                      margin: auto 3%;
+                      /* Adjust the margin for mobile screens */
+                  }
+                  span {
+                      font-size: 14px;
+                  }
+}
 
 /* Add this section for tablet screens (min-width: 768px, max-width: 991px) */
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 920px) {
         .logoimg {
                 width: 20%;
                 /* align-self: center; */
@@ -191,9 +231,9 @@ span {
         
             nav {
                 /* width: 100%; */
-                height: 10px;
+                height: 80px;
                 align-items: center;
-                margin-bottom: 2em;
+                /* margin-bottom: 2em; */
                 /* background-color: #eaf7ec; */
         
             }
@@ -203,19 +243,19 @@ span {
         
             .contact-nav {
                 width: 70%;
-                height: 200px;
+                height: 100px;
                 align-items: center;
                 /* Adjust the width for mobile screens */
                 left: 15%;
-                top: 50%;
+                bottom: 5%;
                 /* Adjust the position for mobile screens */
             }
         
-            .contact-nav ul {
+            /* .contact-nav ul {
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-            }
+            } */
         
             .contact-nav ul a {
                 align-items: center;
@@ -244,6 +284,7 @@ span {
             }
         
             .hero::before {
+                margin-top: 0%;
                 background-size: cover;
                 /* filter: blur(5px); */
         
@@ -251,7 +292,7 @@ span {
 }
 
 /* Add this section for iPad screens in landscape orientation (min-width: 768px, max-width: 1024px) */
-@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+@media screen and (min-width: 768px) and (max-width: 1024px)  {
         .logoimg {
                 width: 20%;
                 /* align-self: center; */
@@ -269,29 +310,29 @@ span {
         
             nav {
                 /* width: 100%; */
-                height: 10px;
+                height: 70px;
                 align-items: center;
-                margin-bottom: 2em;
+                /* margin-bottom: 2em; */
                 /* background-color: #eaf7ec; */
         
             }
         
             span {
-                font-size: 20px;
+                font-size: 14px;
             }
         
             .contact-nav {
-                width: 70%;
-                height: 200px;
+                width: 90%;
+                height: 100px;
                 align-items: center;
                 /* Adjust the width for mobile screens */
-                left: 15%;
-                top: 90%;
+                left: 5%;
+                bottom:-10%;
                 /* Adjust the position for mobile screens */
             }
         
             .contact-nav ul {
-                flex-direction: column;
+                /* flex-direction: column; */
                 justify-content: center;
                 align-items: center;
             }
@@ -318,7 +359,7 @@ span {
         
             .hero h1 {
                 font-size: 50px;
-                margin-top: 1em;
+                /* margin-top: 1em; */
                 /* text-align: center; */
             }
         
@@ -335,6 +376,7 @@ span {
     .logoimg {
             width: 30%;
             align-self: center;
+            /* margin-bottom: 2em; */
             /* margin-top: 2em; */
         }
                 nav div {
@@ -347,8 +389,9 @@ span {
                 }
                           nav {
                                     /* width: 100%; */
-                                    height: 10px;
+                                    height: 90px;
                                     align-items: center;
+                                    /* margin-bottom: 2em; */
                                     /* background-color: #eaf7ec; */
                 
                                 }
@@ -358,7 +401,7 @@ span {
         align-items: center;
         /* Adjust the width for mobile screens */
         left: 5%;
-        top: 70%;
+        bottom:  -30%;
         /* Adjust the position for mobile screens */
     }
 .contact-nav ul{
