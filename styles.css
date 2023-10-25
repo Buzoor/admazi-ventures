@@ -1,4 +1,5 @@
 body {
+    position: relative;
     width: 100%;
     /* height: 500px; */
     margin: 0;
@@ -40,6 +41,12 @@ span {
     font-weight: 300;
     font-size: 14px;
 }
+.container {
+    width: 80%;
+    margin: auto 10%;
+    /* padding-left: 2em; */
+    align-items: center;
+}
 .contact-nav{
     position: absolute;
     background-color: #5cbb66;
@@ -51,7 +58,7 @@ span {
     align-content: center;
     /* margin-top: -3em; */
     /* margin-bottom: 7%; */
-    /* bottom: -20%; */
+    /* top: 53%; */
     left: 15%;
     z-index: 1;
     
@@ -88,12 +95,7 @@ span {
     height: 70px;
     
 }
-.container{
-    width: 80%;
-    margin: auto 10%  ;
-    /* padding-left: 2em; */
-    align-items: center;
-}
+
 
 .hero {
     position: relative;
@@ -327,7 +329,7 @@ span {
                 align-items: center;
                 /* Adjust the width for mobile screens */
                 left: 5%;
-                bottom:40%;
+                bottom:16%;
                 /* Adjust the position for mobile screens */
             }
         
