@@ -1,0 +1,397 @@
+body {
+    width: 100%;
+    height: 700%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eaf7ec;
+}
+@font-face {
+    font-family: 'acumin';
+    src: url('./Acumin/ Pro/ Black.otf') format('woff2'),
+        
+    
+
+}
+.logoimg{
+    width: 150px;
+    /* margin-top: 2em; */
+}
+nav{
+    width: 100%;
+    height: 20px;
+    background-color: #eaf7ec;
+   
+}
+nav div{
+    width: 90%;
+    margin: auto 10%;
+    align-items: center;
+}
+section {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+}
+
+span {
+    font-family: "acumin" sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
+.contact-nav{
+    position: absolute;
+    background-color: #5cbb66;
+    width: 70%;
+    margin: auto;
+    /* padding: 20px; */
+    border-radius: 1em;
+    height: 100px;
+    align-content: center;
+    /* margin-top: -3em; */
+    bottom: -1%;
+    left: 15%;
+    
+}
+
+.contact-nav ul {
+    /* list-style: none; */
+    padding: 0.5em;
+    /* margin: 2em auto; */
+    display: flex;
+    justify-content: center;
+
+}
+.contact-nav a{
+    /* padding: 0%; */
+    text-decoration: none;
+    color: white;
+    display: flex;
+        /* Use flexbox to keep the image and text on the same line */
+        align-items: center;
+}
+.contact-nav a :hover{
+    color:brown;
+    font-size: 16px;
+}
+.contact-nav ul li {
+    /* margin: 0 20px; */margin-right: 2em;
+    list-style-type: none;
+    
+        /* color: white; */
+}
+.contact-nav ul li img{
+    width: 60px;
+    height: 70px;
+    
+}
+.container{
+    width: 80%;
+    margin: auto 10%  ;
+    /* padding-left: 2em; */
+    align-items: center;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    
+    
+}
+
+
+.hero h1 {
+    font-family: "acumin" sans-serif;
+    font-size: 70px;
+    line-height: 1em;
+    position: relative;
+    font-weight: 900;
+    padding-left: 15px;
+    margin-top: 10px;
+    color: #212c4e;
+    
+    /* Ensure the element has a position */
+    animation: slideInFromLeft 3s ease forwards;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        left: -10%;
+        /* Start outside the visible area on the left */
+    }
+
+    100% {
+        left: 0;
+        /* Slide to the original position */
+    }
+}
+
+.hero::before {
+    content: "";
+    background-image: url("./items/medical-items.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* filter: blur(10px); */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: growBackground 5s ease forwards;
+}
+
+@keyframes growBackground {
+    0% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+/* Existing CSS styles remain the same */
+
+.contact-nav img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+/* Existing media query styles remain the same */
+@keyframes slideBg {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Add this section for tablet screens (min-width: 768px, max-width: 991px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+        .logoimg {
+                width: 20%;
+                /* align-self: center; */
+                /* margin-top: 2em; */
+            }
+        
+            nav div {
+                width: 90%;
+        
+                /* display: flex; */
+                margin: auto 3%;
+                /* align-items: center; */
+                /* justify-content: center; */
+            }
+        
+            nav {
+                /* width: 100%; */
+                height: 10px;
+                align-items: center;
+                margin-bottom: 2em;
+                /* background-color: #eaf7ec; */
+        
+            }
+            span{
+                font-size: 20px;
+            }
+        
+            .contact-nav {
+                width: 70%;
+                height: 200px;
+                align-items: center;
+                /* Adjust the width for mobile screens */
+                left: 15%;
+                top: 50%;
+                /* Adjust the position for mobile screens */
+            }
+        
+            .contact-nav ul {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        
+            .contact-nav ul a {
+                align-items: center;
+                /* Reduce the margin for mobile screens */
+            }
+        
+            .contact-nav ul li img {
+                width: 40px;
+                /* Adjust the image size for mobile screens */
+                height: 50px;
+            }
+        
+            .container {
+                width: 95%;
+        
+        
+                /* Adjust the width for mobile screens */
+                margin: auto 3%;
+                /* Adjust the margin for mobile screens */
+            }
+        
+            .hero h1 {
+                font-size: 50px;
+                margin-top: 1em;
+                /* text-align: center; */
+            }
+        
+            .hero::before {
+                background-size: cover;
+                /* filter: blur(5px); */
+        
+            }
+}
+
+/* Add this section for iPad screens in landscape orientation (min-width: 768px, max-width: 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+        .logoimg {
+                width: 20%;
+                /* align-self: center; */
+                /* margin-top: 2em; */
+            }
+        
+            nav div {
+                width: 90%;
+        
+                /* display: flex; */
+                margin: auto 3%;
+                /* align-items: center; */
+                /* justify-content: center; */
+            }
+        
+            nav {
+                /* width: 100%; */
+                height: 10px;
+                align-items: center;
+                margin-bottom: 2em;
+                /* background-color: #eaf7ec; */
+        
+            }
+        
+            span {
+                font-size: 20px;
+            }
+        
+            .contact-nav {
+                width: 70%;
+                height: 200px;
+                align-items: center;
+                /* Adjust the width for mobile screens */
+                left: 15%;
+                top: 90%;
+                /* Adjust the position for mobile screens */
+            }
+        
+            .contact-nav ul {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        
+            .contact-nav ul a {
+                align-items: center;
+                /* Reduce the margin for mobile screens */
+            }
+        
+            .contact-nav ul li img {
+                width: 40px;
+                /* Adjust the image size for mobile screens */
+                height: 50px;
+            }
+        
+            .container {
+                width: 95%;
+        
+        
+                /* Adjust the width for mobile screens */
+                margin: auto 3%;
+                /* Adjust the margin for mobile screens */
+            }
+        
+            .hero h1 {
+                font-size: 50px;
+                margin-top: 1em;
+                /* text-align: center; */
+            }
+        
+            .hero::before {
+                background-size: cover;
+                /* filter: blur(5px); */
+        
+            }
+}
+
+/* Add this section for mobile screens (up to 767px) */
+@media screen and (max-width: 767px) {
+
+    .logoimg {
+            width: 30%;
+            align-self: center;
+            /* margin-top: 2em; */
+        }
+                nav div {
+                    width: 80%;
+                    
+                    display: flex;
+                    margin: auto 10%;
+                    align-items: center;
+                    justify-content: center;
+                }
+                          nav {
+                                    /* width: 100%; */
+                                    height: 10px;
+                                    align-items: center;
+                                    /* background-color: #eaf7ec; */
+                
+                                }
+    .contact-nav {
+        width: 90%;
+        height: 200px;
+        align-items: center;
+        /* Adjust the width for mobile screens */
+        left: 5%;
+        top: 45%;
+        /* Adjust the position for mobile screens */
+    }
+.contact-nav ul{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+    .contact-nav ul a {
+        align-items: center;
+        /* Reduce the margin for mobile screens */
+    }
+
+    .contact-nav ul li img {
+        width: 40px;
+        /* Adjust the image size for mobile screens */
+        height: 50px;
+    }
+
+    .container {
+        width: 95%;
+        
+       
+        /* Adjust the width for mobile screens */
+        margin: auto 2.5%;
+        /* Adjust the margin for mobile screens */
+    }
+    .hero h1{
+        font-size: 50px;
+        text-align: center;
+    }
+        .hero::before{
+            background-size:cover;
+/* filter: blur(5px); */
+
+        }
+}
