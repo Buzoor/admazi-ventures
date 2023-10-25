@@ -401,7 +401,7 @@ span {
         align-items: center;
         /* Adjust the width for mobile screens */
         left: 5%;
-        bottom:  -30%;
+        bottom:  0%;
         /* Adjust the position for mobile screens */
     }
 .contact-nav ul{
